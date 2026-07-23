@@ -51,7 +51,7 @@
 <td>
 
 **UI Features**
-- 🌙 Dark Mode (localStorage)
+- 🌙 Dark Mode (persists across sessions)
 - 🔍 Live Search
 - 🏷️ Filter by Status & Priority
 - 🔔 Toast Notifications
@@ -78,19 +78,22 @@
 ---
 
 ## 📁 Project Structure
+
+```
 taskflow-webapp/
 │
-├── 📁 includes/
+├── includes/
 │   └── db.php              # Database connection file
 │
-├── 📄 index.php            # Main dashboard (UI + task display)
-├── 📄 add_task.php         # Handle add task form submission
-├── 📄 complete_task.php    # Mark task as completed
-├── 📄 delete_task.php      # Delete a task
-├── 🎨 style.css            # All custom styles + dark mode
-├── ⚡ darkmode.js          # Dark mode toggle logic
-├── 🗄️ todo_db.sql          # Database schema & structure
-└── 📘 README.md
+├── index.php               # Main dashboard (UI + task display)
+├── add_task.php            # Handle add task form submission
+├── complete_task.php       # Mark task as completed
+├── delete_task.php         # Delete a task
+├── style.css               # All custom styles + dark mode
+├── darkmode.js             # Dark mode toggle logic
+├── todo_db.sql             # Database schema & structure
+└── README.md
+```
 
 ---
 
@@ -108,14 +111,18 @@ git clone https://github.com/Rifaqajmal/taskflow-webapp-to-do-app.git
 ```
 
 **Step 2** — Move the folder to your XAMPP directory
+```
 C:\xampp\htdocs\taskflow-webapp\
+```
 
 **Step 3** — Start XAMPP and run both:
 - ✅ Apache
 - ✅ MySQL
 
 **Step 4** — Open phpMyAdmin in your browser
+```
 http://localhost/phpmyadmin
+```
 
 **Step 5** — Create a new database
 ```sql
@@ -126,7 +133,9 @@ CREATE DATABASE todo_db;
 > phpMyAdmin → select `todo_db` → Import tab → choose `todo_db.sql` → Go
 
 **Step 7** — Open the app
+```
 http://localhost/taskflow-webapp/
+```
 
 ---
 
@@ -143,20 +152,6 @@ CREATE TABLE tasks (
     created_at  TIMESTAMP    DEFAULT CURRENT_TIMESTAMP
 );
 ```
-
----
-
-## 🎯 What I Learned
-
-By building this project, I gained hands-on experience with:
-
-- ✅ Full CRUD operations using PHP & MySQL
-- ✅ Database connection and query execution
-- ✅ Bootstrap 5 grid and component system
-- ✅ JavaScript DOM manipulation
-- ✅ localStorage for persistent settings
-- ✅ Responsive dashboard UI design
-- ✅ Git & GitHub version control workflow
 
 ---
 
